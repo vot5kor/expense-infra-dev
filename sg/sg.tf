@@ -70,15 +70,15 @@ module "app_alb_sg" {
 # }
 
 
-# # APP ALB accepting traffic from bastion
-# resource "aws_security_group_rule" "app_alb_bastion" {
-#   type              = "ingress"
-#   from_port         = 80
-#   to_port           = 80
-#   protocol          = "tcp"
-#   source_security_group_id       = module.bastion_sg.sg_id
-#   security_group_id = module.app_alb_sg.sg_id
-# }
+# APP ALB accepting traffic from bastion
+resource "aws_security_group_rule" "app_alb_bastion" {
+  type              = "ingress"
+  from_port         = 80
+  to_port           = 80
+  protocol          = "tcp"
+  source_security_group_id       = module.bastion_sg.sg_id
+  security_group_id = module.app_alb_sg.sg_id
+}
 
 # # JDOPS-32, Bastion host should be accessed from office n/w
 # resource "aws_security_group_rule" "bastion_public" {
