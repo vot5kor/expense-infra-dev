@@ -1,6 +1,6 @@
 data "aws_ami" "openvpn" {
     most_recent      = true
-    owners           = ["327990815167"] # OpenVPN Technologies, Inc.
+    owners           = ["679593333241"] # OpenVPN Technologies, Inc.
     filter {
         name   = "name"
         values = ["OpenVPN Access Server Community Image-fe8020db-*"]
