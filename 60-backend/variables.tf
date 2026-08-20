@@ -9,17 +9,11 @@ variable "environment" {
 variable "common_tags" {
     default = {
         Project = "expense"
-        Terraform = "true"
         Environment = "dev"
+        Terraform = "true"
     }
 }
 
-variable "backend_tags" {
-    default = {
-        Component = "backend"
-    }
-}
-
-variable "zone_name" {
+variable "domain_name" {
     default = "zenzee.fun"
 }
