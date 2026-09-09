@@ -27,7 +27,8 @@ variable "password_wo" {
 
 }
 
-# variable "password_wo_version" {
-#   description = "Used together with password_wo to trigger an update. Increment this value when an update to password_wo is required."
-#   type        = number
-# }
+variable "password_wo_version" {
+  description = "Used together with password_wo to trigger an update. Increment this value when an update to password_wo is required."
+  type        = number
+  default     = 1
+}

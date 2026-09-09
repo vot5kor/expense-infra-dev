@@ -13,6 +13,7 @@ module "db" {
   manage_master_user_password = false
 #   password = "ExpenseApp1"
   password_wo = var.password_wo
+  password_wo_version = var.password_wo_version
 
   vpc_security_group_ids = [local.mysql_sg_id]
 
