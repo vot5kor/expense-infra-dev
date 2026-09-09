@@ -5,7 +5,7 @@ terraform {
       version = "1.10.5"
     }
   }
-}
+
   backend "s3" {
     bucket = "kvn-tf-remote-state-dev"
     key    = "expense-dev-rds" # you should have unique keys with in the bucket, same key should not be used in other repos or tf projects
@@ -13,7 +13,7 @@ terraform {
     dynamodb_table = "kvn-tf-remote-state-dev"
     use_lockfile = true
 }
-
+}
 provider "aws" {
   # Configuration options
   region = "us-east-1"
