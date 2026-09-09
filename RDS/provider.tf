@@ -2,10 +2,10 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "1.11.1"
+      version = "1.10.5"
     }
   }
-
+}
   backend "s3" {
     bucket = "kvn-tf-remote-state-dev"
     key    = "expense-dev-rds" # you should have unique keys with in the bucket, same key should not be used in other repos or tf projects
