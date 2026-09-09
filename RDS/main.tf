@@ -3,7 +3,7 @@ module "db" {
   identifier = local.resource_name #expense-dev
 
   engine            = "mysql"
-  engine_version    = ">=7.2"
+  engine_version    = "-> 7.2"
   instance_class    = "db.t4g.micro"
   allocated_storage = 20
 
@@ -25,7 +25,7 @@ module "db" {
   family = "mysql8.0"
 
   # DB option group
-  major_engine_version = "8.0.40"
+  major_engine_version = "8.0"
 
   # Database Deletion Protection
   deletion_protection = false
