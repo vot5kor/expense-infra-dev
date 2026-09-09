@@ -22,7 +22,7 @@ module "db" {
   db_subnet_group_name = local.database_subnet_group_name
 
   # DB parameter group
-  family = "mysql8.0.40"
+  family = "mysql8.0"
 
   # DB option group
   major_engine_version = "8.0.40"
