@@ -11,8 +11,7 @@ terraform {
     key     = "roboshop-dev-db"
     region  = "us-east-1"
     encrypt = true
-    lock_table = "kvn-tf-remote-state-dev" # Replace with your DynamoDB table name for state locking
-    # use_lockfile   = true
+    use_lockfile   = true
   }
 }
 
