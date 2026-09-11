@@ -10,7 +10,8 @@ terraform {
     bucket = "kvn-tf-remote-state-dev"
     key    = "expense-dev-bastion" # you should have unique keys with in the bucket, same key should not be used in other repos or tf projects
     region = "us-east-1"
-    dynamodb_table = "kvn-tf-remote-state-dev"
+    # dynamodb_table = "kvn-tf-remote-state-dev"
+    lock_table = "kvn-tf-remote-state-dev"
   }
 }
 
